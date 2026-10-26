@@ -1,0 +1,15 @@
+name = "betma-dashboard-api"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+[vars]
+# Thay bằng địa chỉ GitHub Pages của bạn (nhiều địa chỉ: ngăn cách bằng dấu phẩy). KHÔNG có dấu "/" ở cuối.
+ALLOWED_ORIGIN = "https://USERNAME.github.io"
+
+[[r2_buckets]]
+binding = "DATA"
+bucket_name = "betma-dashboard-data"
+
+# Secrets (KHÔNG ghi vào file này) — đặt bằng:
+#   npx wrangler@3 secret put ADMIN_KEY  --config worker/wrangler.toml
+#   npx wrangler@3 secret put VIEWER_KEY --config worker/wrangler.toml   (tùy chọn)

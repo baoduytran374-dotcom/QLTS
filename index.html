@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>BETMA ENGLISH — Dashboard tuyển sinh &amp; tài chính 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head><body>
+<div class="app">
+<nav><div class="brand">BETMA ENGLISH<small>Quản trị tuyển sinh 2026</small></div>
+<button data-t="t1" class="on">1 · Tổng quan tuyển sinh</button><button data-t="t2">2 · Báo cáo theo tháng</button><button data-t="t3">3 · Báo cáo theo tuần</button><button data-t="t4">4 · Doanh thu & công nợ</button></nav>
+<main>
+<header><h1 id="ttl">Tổng quan tuyển sinh</h1><span id="upd"></span><button class="btn" id="dq">Chất lượng dữ liệu</button><button class="btn p" id="upBtn">CẬP NHẬT DỮ LIỆU TUYỂN SINH</button><button class="btn" onclick="location.reload()">Tải lại</button></header>
+<div class="bar" id="gf"></div>
+
+<section class="tab on" id="t1">
+ <div class="bar" id="t1f"></div><div class="kpis" id="t1k"></div>
+ <div class="grid">
+  <div class="card"><h3>Xu hướng tuyển sinh <span class="sp"></span><span class="seg" id="s1a"><button data-v="d" class="on">Ngày</button><button data-v="w">Tuần</button><button data-v="m">Tháng</button></span><span class="seg" id="s1b"><button data-v="n" class="on">Học viên</button><button data-v="r">Doanh thu</button></span></h3><div class="ch"><canvas id="c1"></canvas></div><div class="na">Trục thời gian theo ngày đăng ký.</div></div>
+  <div class="card"><h3>Doanh thu đăng ký & thực thu theo tháng <span class="sp"></span><span class="seg" id="s2"><button data-v="a" class="on">Số tiền</button><button data-v="p">% thực thu</button></span></h3><div class="ch"><canvas id="c2"></canvas></div></div>
+  <div class="card"><h3>Tuyển sinh theo khóa học</h3><div class="ch"><canvas id="c3"></canvas></div></div>
+  <div class="card"><h3>Tuyển sinh theo lớp <span class="sp"></span><small style="color:var(--mut)">Nhấp cột để xem chi tiết</small></h3><div class="ch"><canvas id="c4"></canvas></div></div>
+  <div class="card"><h3>Hiệu suất tư vấn viên <span class="sp"></span><span class="seg" id="s5"><button data-v="n" class="on">Học viên</button><button data-v="r">Doanh thu</button><button data-v="c">Thực thu</button></span></h3><div class="ch"><canvas id="c5"></canvas></div></div>
+  <div class="card"><h3>Cơ cấu nguồn tuyển sinh</h3><div class="ch"><canvas id="c6"></canvas></div><div id="c6n"></div></div>
+ </div>
+ <div class="card"><h3>Danh sách học viên</h3><div id="tb1"></div></div>
+</section>
+
+<section class="tab" id="t2">
+ <div class="bar" id="t2f"></div><div class="kpis" id="t2k"></div>
+ <div class="grid"><div class="card"><h3>Đăng ký mới theo ngày trong tháng</h3><div class="ch"><canvas id="c7"></canvas></div></div>
+ <div class="card"><h3>Kết quả theo ngày</h3><div id="tb2d"></div></div></div>
+ <div class="card" style="margin-bottom:14px"><h3>Top tư vấn viên của tháng</h3><div id="tb2t"></div><div class="na">Chưa có dữ liệu chỉ tiêu KPI/tháng trong workbook nên chưa tính mức hoàn thành chỉ tiêu.</div></div>
+ <div class="grid"><div class="card"><h3>Nguồn tuyển sinh trong tháng</h3><div class="ch"><canvas id="c8"></canvas></div></div><div class="card"><h3>Chi tiết theo nguồn</h3><div id="tb2s"></div><div class="na">Chưa có dữ liệu chi phí marketing nên chưa tính CAC.</div></div></div>
+</section>
+
+<section class="tab" id="t3">
+ <div class="bar" id="t3f"></div><div class="kpis" id="t3k"></div>
+ <div class="grid"><div class="card"><h3>Đăng ký theo ngày (Thứ Hai → Chủ nhật) <span class="sp"></span><span class="seg" id="s3"><button data-v="n" class="on">Học viên</button><button data-v="r">Doanh thu</button></span></h3><div class="ch"><canvas id="c9"></canvas></div></div>
+ <div class="card"><h3>Top 5 tư vấn viên</h3><div class="ch"><canvas id="c10"></canvas></div></div></div>
+ <div class="card" style="margin-bottom:14px"><h3>Xếp hạng tư vấn viên của tuần</h3><div id="tb3t"></div><div class="na">Chưa có dữ liệu chỉ tiêu tuần nên chưa tính mức hoàn thành.</div></div>
+ <div class="card"><h3>Nguồn tuyển sinh của tuần <span class="sp"></span><small style="color:var(--mut)">Nhấp một nguồn để xem danh sách học viên</small></h3><div id="tb3s"></div></div>
+</section>
+
+<section class="tab" id="t4">
+ <div class="bar" id="t4f"></div><div class="kpis" id="t4k"></div>
+ <div class="grid"><div class="card"><h3>Doanh thu đăng ký, thực thu và công nợ cuối kỳ</h3><div class="ch"><canvas id="c11"></canvas></div></div><div class="card"><h3>Báo cáo theo tháng</h3><div id="tb4m"></div></div></div>
+ <div class="card" style="margin-bottom:14px"><h3>Doanh thu & thực thu theo lớp <span class="sp"></span><small style="color:var(--mut)">Nhấp một lớp để xem học viên</small></h3><div id="tb4c"></div></div>
+ <div class="card"><h3>Học viên chưa hoàn tất học phí</h3><div class="tools" id="t4q"></div><div id="tb4d"></div></div>
+</section>
+</main></div>
+<div class="modal" id="md"><div class="box"><h2><span id="mt"></span><button class="btn" onclick="md.classList.remove('on')">Đóng</button></h2><div id="mb"></div></div></div>
+<div id="pubWarn" class="pubwarn" hidden></div>
+<div id="boot" class="boot"><div class="bootbox" id="bootbox">Đang tải dữ liệu…</div></div>
+<div class="modal" id="upModal"><div class="box upbox" id="upBox"></div></div>
+<script type="module" src="/src/main.js"></script>
+</body></html>

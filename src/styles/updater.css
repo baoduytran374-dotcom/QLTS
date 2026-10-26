@@ -1,0 +1,18 @@
+/* Giao diện khu vực cập nhật dữ liệu — dùng lại biến màu của dashboard */
+.boot{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:100;padding:16px}
+.bootbox{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 24px;max-width:420px;width:100%;display:flex;flex-direction:column;gap:10px}
+.bootbox h2{margin:0;font-size:17px;color:var(--red)}.bootbox p{margin:0;color:var(--mut)}
+.pubwarn{position:sticky;bottom:0;z-index:30;background:var(--warnbg);color:var(--warn);padding:8px 14px;font-size:12.5px;border-top:1px solid var(--line)}
+.upbox{max-width:980px}
+.upbox h2 span{flex:1}
+.upbox code{font-size:12px;background:var(--bg);padding:1px 5px;border-radius:4px}
+.updrop{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0}
+.upbox .card{margin:10px 0}
+.upmsg{border-radius:8px;padding:9px 12px;margin:10px 0;font-size:13px}.upmsg ul{margin:6px 0 0;padding-left:18px}
+.upmsg.bad{background:var(--badbg);color:var(--red)}.upmsg.warn{background:var(--warnbg);color:var(--warn)}
+.upmsg.ok{background:var(--okbg);color:var(--ok)}.upmsg.info{background:var(--bg);color:var(--mut)}
+.upact{display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end;margin-top:10px}.upact .sp{flex:1}
+.upkey{display:flex;flex-direction:column;font-size:11.5px;color:var(--mut);gap:3px}
+.upchk{display:flex;gap:6px;align-items:center;font-size:12.5px}
+.updet{margin-top:14px}.updet summary{cursor:pointer;color:var(--mut)}
+.btn[disabled]{opacity:.55;cursor:not-allowed}
